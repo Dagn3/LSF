@@ -29,7 +29,7 @@ class FromageCrudController extends AbstractCrudController
         return [
             TextField::new('nom'),
             SlugField::new('slug')->hideWhenCreating()->hideOnIndex()->hideWhenUpdating(),
-            MoneyField::new('prix')->setCurrency('EUR'),
+            MoneyField::new('prix')->setCurrency('EUR')->setStoredAsCents(false),
             TextareaField::new('description')-> setMaxLength(28)  ,
             BooleanField::new('display')->hideWhenCreating(),
             AssociationField::new('Lait'),

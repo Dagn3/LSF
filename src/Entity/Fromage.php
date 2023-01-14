@@ -31,7 +31,7 @@ class Fromage
     private $nom;
 
     /**
-     * @ORM\Column(type="decimal", precision=2, scale=10)
+     * @ORM\Column(type="decimal", precision=9, scale=2)
      * @Assert\NotBlank(message="Cette valeur ne doit pas être vide.")
      */
     private $prix;

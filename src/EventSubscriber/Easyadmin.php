@@ -106,10 +106,12 @@ class Easyadmin implements EventSubscriberInterface
                 $this->setPassword($entity);
         }
 
-        if (($entity instanceof Fromage)) {
-            $nom = "plop plop plop ^^";
-       
-            $entity->setSlug(str_replace(' ', '-', $nom));
+        if(($entity instanceof Fromage)) {
+            $entity->setDisplay(1);
+
+            $nom = $entity->getNom();
+        
+            $entity->setSlug(strtolower(str_replace(' ', '-', $nom)));
         }
      
     }
