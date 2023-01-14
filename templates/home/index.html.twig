@@ -1,0 +1,123 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}LSF - Accueil{% endblock %}
+
+{% block body %}
+
+
+    <div class="relative">
+        <img src="{{ asset('img/front.png') }}" alt="Front">
+            <div class="absolute w-full bottom-0 left-0 ">
+                <div class="h-12 bg-gradient-to-t from-stone-800 via-stone-800 to-bg-transparent md:h-36   "></div>
+
+            </div>
+    </div>
+
+    <div class="bg-stone-800 flex flex-row justify-center items-center ">
+        <video controls class="rounded pb-12 px-6 pt-0 lg:w-3/4 w-full" poster="{{ asset('img/video2.PNG') }}">
+            <source  src="{{ asset('media/videoFront.mp4') }}" type="video/mp4">
+            Sorry, your browser doesn't support embedded videos.
+        </video>
+    </div>
+
+
+
+
+
+    <!-- Nos produits -->
+
+    <div class=" h-auto   ">
+        <div class="text-center max-w-xl mx-auto pt-12">
+            <h1 class="text-6xl md:text-7xl font-bold mb-5 text-stone-800">Nos fromages</h1>
+            <h3 class="text-xl mb-5 font-light text-stone-800">Découvez nos produits parmis notre liste de plus de 200 fromages </h3>
+            <div class="text-center mb-10">
+                <span class="inline-block w-1 h-1 rounded-full bg-stone-800 ml-1"></span>
+                <span class="inline-block w-3 h-1 rounded-full bg-stone-800 ml-1"></span>
+                <span class="inline-block w-40 h-1 rounded-full bg-stone-800"></span>
+                <span class="inline-block w-3 h-1 rounded-full bg-stone-800 ml-1"></span>
+                <span class="inline-block w-1 h-1 rounded-full bg-stone-800 ml-1"></span>
+            </div>
+        </div>
+
+
+
+        <!-- CARD -->
+
+        <div class="flex flex-wrap  justify-center ">
+            {% for fromage in fromages %}
+
+            <div class="p-2">
+                <a href="{{ path('app_fromages') }}">
+                <div class="max-w-sm rounded  shadow-lg bg-stone-800">
+
+                    <img class="w-full" src="{{ asset('uploads/fromages/') }}{{ fromage.image }}" alt="">
+                    <div class="px-6 py-4">
+                        <div class="font-bold text-white text-xl mb-2 underline">{{ fromage.nom }}</div>
+                        <p class="text-white text-base">
+                            {{ fromage.description|slice(0, 35) }}
+                        </p>
+                    </div>
+                    <div class="px-6 pt-4 pb-2 ">
+                        {% if "Vache" in fromage.lait %}
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Vache</span>
+                        {% endif %}
+                        {% if "Chevre" in fromage.lait %}
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Chèvre</span>
+                        {% endif %}
+                        {% if "Brebis" in fromage.lait %}
+                            <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">Brebis</span>
+                        {% endif %}
+                        <br>
+                        <span class="inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2 mb-2">{{ fromage.pate }}</span>
+                    </div>
+                </div>
+                </a>
+            </div>
+
+            {% endfor %}
+        </div>
+        <div class="w-auto text-white flex justify-center pb-12 pt-12">
+            <a href="{{ path('app_fromages') }}">
+                <button type="submit" class=" bg-green-700 hover:bg-green-800 text-white font-bold  py-4 px-4 border border-stone-500 hover:border-transparent rounded ">DECOUVREZ TOUS NOS PRODUITS</button>
+            </a>
+        </div>
+
+
+        <div class=" h-auto bg-stone-800">
+            <div class="text-center max-w-xl mx-auto pt-12">
+                <h1 class="text-6xl md:text-7xl font-bold mb-5 text-white">Nos magasins</h1>
+                <h3 class="text-xl mb-5 font-light text-white">Retrouvez Les saveurs Fromagères à Bergues, rue Lamartine ou bien à Malo, avenue Faidherbe.</h3>
+                <div class="text-center mb-10">
+                    <span class="inline-block w-1 h-1 rounded-full bg-white ml-1"></span>
+                    <span class="inline-block w-3 h-1 rounded-full bg-white ml-1"></span>
+                    <span class="inline-block w-40 h-1 rounded-full bg-white"></span>
+                    <span class="inline-block w-3 h-1 rounded-full bg-white ml-1"></span>
+                    <span class="inline-block w-1 h-1 rounded-full bg-white ml-1"></span>
+                </div>
+            </div>
+
+            <div class="w-full grid 2xl:grid-cols-2 grid-cols-1 justify-items-center">
+        
+
+                {{ include('components/frontShopBergues.html.twig') }}
+
+
+                {{ include('components/frontShopMalo.html.twig') }}
+        
+            </div>
+            <div class="w-auto text-white flex justify-center pb-12 pt-12  ">
+                <a href="{{ path('app_contact') }}">
+                    <button type="submit" class=" bg-green-700  hover:bg-green-800 text-white font-bold  py-4 px-8 border border-stone-500 hover:border-transparent rounded ">NOUS CONTACTER</button>
+                </a>
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="pb-12 ">
+    {{ include('components/frontReview.html.twig') }}
+    </div>
+
+
+{% endblock %}

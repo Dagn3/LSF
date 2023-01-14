@@ -1,0 +1,53 @@
+<?php //App%255CEntity%255CFromage%2524imageFile
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField')),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Image'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Image')),
+    ],
+    null,
+    [
+        'Vich\\UploaderBundle\\Mapping\\Annotation\\UploadableField' => [
+            'mapping' => [
+                'fromage_images',
+            ],
+            'fileNameProperty' => [
+                'image',
+            ],
+        ],
+        'stdClass' => [
+            'mimeTypes' => [
+                1 => [
+                    'image/jpeg',
+                    'image/png',
+                    'image/jpg',
+                ],
+            ],
+            'minWidth' => [
+                1 => '500',
+            ],
+            'minHeight' => [
+                1 => '350',
+            ],
+            'mimeTypesMessage' => [
+                1 => 'Seulement .jpeg .png .jpg',
+            ],
+            'minWidthMessage' => [
+                1 => 'La largeur de l\'image est trop petite, ({{ width }}px). largeur minimum attendu : {{ min_width }}px',
+            ],
+            'minHeightMessage' => [
+                1 => 'La hauteur de l\'image est trop petite, ({{ height }}px). Hauteur minimum attendu : {{ min_height }}px',
+            ],
+            'groups' => [
+                1 => [
+                    'Default',
+                ],
+            ],
+        ],
+    ],
+    [
+        $o[0],
+        $o[1],
+    ],
+    []
+); }];

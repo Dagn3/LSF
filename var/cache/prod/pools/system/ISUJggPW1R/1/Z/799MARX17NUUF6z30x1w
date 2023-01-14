@@ -1,0 +1,93 @@
+<?php //ccd5a45aa92414671043468a9b2b9d5c
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'dpid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT f0_.id AS id_0, f0_.nom AS nom_1, f0_.prix AS prix_2, f0_.description AS description_3, f0_.image AS image_4, f0_.slug AS slug_5, f0_.display AS display_6, f0_.pate_id AS pate_id_7, f0_.provenance_id AS provenance_id_8 FROM fromage f0_ WHERE f0_.id IN (?) ORDER BY f0_.description DESC',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'entity' => 'App\\Entity\\Fromage',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'nom_1' => 'nom',
+                    'prix_2' => 'prix',
+                    'description_3' => 'description',
+                    'image_4' => 'image',
+                    'slug_5' => 'slug',
+                    'display_6' => 'display',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'pate_id_7' => 'integer',
+                    'provenance_id_8' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'entity' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'pate_id_7' => 'pate_id',
+                    'provenance_id_8' => 'provenance_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'entity',
+                    'nom_1' => 'entity',
+                    'prix_2' => 'entity',
+                    'description_3' => 'entity',
+                    'image_4' => 'entity',
+                    'slug_5' => 'entity',
+                    'display_6' => 'entity',
+                    'pate_id_7' => 'entity',
+                    'provenance_id_8' => 'entity',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Fromage',
+                    'nom_1' => 'App\\Entity\\Fromage',
+                    'prix_2' => 'App\\Entity\\Fromage',
+                    'description_3' => 'App\\Entity\\Fromage',
+                    'image_4' => 'App\\Entity\\Fromage',
+                    'slug_5' => 'App\\Entity\\Fromage',
+                    'display_6' => 'App\\Entity\\Fromage',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

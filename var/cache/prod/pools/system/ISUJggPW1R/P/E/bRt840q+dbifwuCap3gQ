@@ -1,0 +1,119 @@
+<?php //a8947920d05c11ebb900bf4e101bbfb9
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Doctrine\\ORM\\Query\\ParserResult'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ParserResult')),
+        clone ($p['Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\Exec\\SingleSelectExecutor')),
+        clone ($p['Doctrine\\ORM\\Query\\ResultSetMapping'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Doctrine\\ORM\\Query\\ResultSetMapping')),
+    ],
+    null,
+    [
+        'Doctrine\\ORM\\Query\\ParserResult' => [
+            '_sqlExecutor' => [
+                $o[1],
+            ],
+            '_resultSetMapping' => [
+                $o[2],
+            ],
+            '_parameterMappings' => [
+                [
+                    'dpid' => [
+                        0,
+                    ],
+                ],
+            ],
+        ],
+        'Doctrine\\ORM\\Query\\Exec\\AbstractSqlExecutor' => [
+            '_sqlStatements' => [
+                1 => 'SELECT f0_.id AS id_0, f0_.nom AS nom_1, f0_.prix AS prix_2, f0_.description AS description_3, f0_.image AS image_4, f0_.slug AS slug_5, f0_.display AS display_6, l1_.id AS id_7, l1_.nom AS nom_8, p2_.id AS id_9, p2_.nom AS nom_10, f0_.pate_id AS pate_id_11, f0_.provenance_id AS provenance_id_12 FROM fromage f0_ INNER JOIN fromage_lait f3_ ON f0_.id = f3_.fromage_id INNER JOIN lait l1_ ON l1_.id = f3_.lait_id INNER JOIN pate p2_ ON f0_.pate_id = p2_.id WHERE f0_.display = 1 AND f0_.id IN (?)',
+            ],
+        ],
+        'stdClass' => [
+            'aliasMap' => [
+                2 => [
+                    'p' => 'App\\Entity\\Fromage',
+                    'l' => 'App\\Entity\\Lait',
+                    'pa' => 'App\\Entity\\Pate',
+                ],
+            ],
+            'relationMap' => [
+                2 => [
+                    'l' => 'Lait',
+                    'pa' => 'Pate',
+                ],
+            ],
+            'parentAliasMap' => [
+                2 => [
+                    'l' => 'p',
+                    'pa' => 'p',
+                ],
+            ],
+            'fieldMappings' => [
+                2 => [
+                    'id_0' => 'id',
+                    'nom_1' => 'nom',
+                    'prix_2' => 'prix',
+                    'description_3' => 'description',
+                    'image_4' => 'image',
+                    'slug_5' => 'slug',
+                    'display_6' => 'display',
+                    'id_7' => 'id',
+                    'nom_8' => 'Nom',
+                    'id_9' => 'id',
+                    'nom_10' => 'nom',
+                ],
+            ],
+            'typeMappings' => [
+                2 => [
+                    'pate_id_11' => 'integer',
+                    'provenance_id_12' => 'integer',
+                ],
+            ],
+            'entityMappings' => [
+                2 => [
+                    'p' => null,
+                ],
+            ],
+            'metaMappings' => [
+                2 => [
+                    'pate_id_11' => 'pate_id',
+                    'provenance_id_12' => 'provenance_id',
+                ],
+            ],
+            'columnOwnerMap' => [
+                2 => [
+                    'id_0' => 'p',
+                    'nom_1' => 'p',
+                    'prix_2' => 'p',
+                    'description_3' => 'p',
+                    'image_4' => 'p',
+                    'slug_5' => 'p',
+                    'display_6' => 'p',
+                    'id_7' => 'l',
+                    'nom_8' => 'l',
+                    'id_9' => 'pa',
+                    'nom_10' => 'pa',
+                    'pate_id_11' => 'p',
+                    'provenance_id_12' => 'p',
+                ],
+            ],
+            'declaringClasses' => [
+                2 => [
+                    'id_0' => 'App\\Entity\\Fromage',
+                    'nom_1' => 'App\\Entity\\Fromage',
+                    'prix_2' => 'App\\Entity\\Fromage',
+                    'description_3' => 'App\\Entity\\Fromage',
+                    'image_4' => 'App\\Entity\\Fromage',
+                    'slug_5' => 'App\\Entity\\Fromage',
+                    'display_6' => 'App\\Entity\\Fromage',
+                    'id_7' => 'App\\Entity\\Lait',
+                    'nom_8' => 'App\\Entity\\Lait',
+                    'id_9' => 'App\\Entity\\Pate',
+                    'nom_10' => 'App\\Entity\\Pate',
+                ],
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];

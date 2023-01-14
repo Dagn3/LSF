@@ -1,0 +1,161 @@
+<?php //App.Entity.Fromage
+
+return [PHP_INT_MAX, static function () { return \Symfony\Component\VarExporter\Internal\Hydrator::hydrate(
+    $o = [
+        (($f = &\Symfony\Component\VarExporter\Internal\Registry::$factories)['Symfony\\Component\\Validator\\Mapping\\ClassMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\ClassMetadata'))(),
+        ($f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'] ?? \Symfony\Component\VarExporter\Internal\Registry::f('Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'))(),
+        clone (($p = &\Symfony\Component\VarExporter\Internal\Registry::$prototypes)['Symfony\\Component\\Validator\\Constraints\\NotBlank'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\NotBlank')),
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone $p['Symfony\\Component\\Validator\\Constraints\\NotBlank'],
+        $f['Symfony\\Component\\Validator\\Mapping\\PropertyMetadata'](),
+        clone ($p['Symfony\\Component\\Validator\\Constraints\\Image'] ?? \Symfony\Component\VarExporter\Internal\Registry::p('Symfony\\Component\\Validator\\Constraints\\Image')),
+    ],
+    null,
+    [
+        'stdClass' => [
+            'name' => [
+                'App\\Entity\\Fromage',
+                'nom',
+                3 => 'prix',
+                5 => 'description',
+                7 => 'imageFile',
+            ],
+            'defaultGroup' => [
+                'Fromage',
+            ],
+            'members' => [
+                [
+                    'nom' => [
+                        $o[1],
+                    ],
+                    'prix' => [
+                        $o[3],
+                    ],
+                    'description' => [
+                        $o[5],
+                    ],
+                    'imageFile' => [
+                        $o[7],
+                    ],
+                ],
+            ],
+            'properties' => [
+                [
+                    'nom' => $o[1],
+                    'prix' => $o[3],
+                    'description' => $o[5],
+                    'imageFile' => $o[7],
+                ],
+            ],
+            'class' => [
+                1 => 'App\\Entity\\Fromage',
+                3 => 'App\\Entity\\Fromage',
+                5 => 'App\\Entity\\Fromage',
+                7 => 'App\\Entity\\Fromage',
+            ],
+            'property' => [
+                1 => 'nom',
+                3 => 'prix',
+                5 => 'description',
+                7 => 'imageFile',
+            ],
+            'constraints' => [
+                1 => [
+                    $o[2],
+                ],
+                3 => [
+                    $o[4],
+                ],
+                5 => [
+                    $o[6],
+                ],
+                7 => [
+                    $o[8],
+                ],
+            ],
+            'constraintsByGroup' => [
+                1 => [
+                    'Default' => [
+                        $o[2],
+                    ],
+                    'Fromage' => [
+                        $o[2],
+                    ],
+                ],
+                3 => [
+                    'Default' => [
+                        $o[4],
+                    ],
+                    'Fromage' => [
+                        $o[4],
+                    ],
+                ],
+                5 => [
+                    'Default' => [
+                        $o[6],
+                    ],
+                    'Fromage' => [
+                        $o[6],
+                    ],
+                ],
+                7 => [
+                    'Default' => [
+                        $o[8],
+                    ],
+                    'Fromage' => [
+                        $o[8],
+                    ],
+                ],
+            ],
+            'message' => [
+                2 => 'Cette valeur ne doit pas être vide.',
+                4 => 'Cette valeur ne doit pas être vide.',
+                6 => 'Cette valeur ne doit pas être vide.',
+            ],
+            'groups' => [
+                2 => [
+                    'Default',
+                    'Fromage',
+                ],
+                4 => [
+                    'Default',
+                    'Fromage',
+                ],
+                6 => [
+                    'Default',
+                    'Fromage',
+                ],
+                8 => [
+                    'Default',
+                    'Fromage',
+                ],
+            ],
+            'mimeTypes' => [
+                8 => [
+                    'image/jpeg',
+                    'image/png',
+                    'image/jpg',
+                ],
+            ],
+            'minWidth' => [
+                8 => '500',
+            ],
+            'minHeight' => [
+                8 => '350',
+            ],
+            'mimeTypesMessage' => [
+                8 => 'Seulement .jpeg .png .jpg',
+            ],
+            'minWidthMessage' => [
+                8 => 'La largeur de l\'image est trop petite, ({{ width }}px). largeur minimum attendu : {{ min_width }}px',
+            ],
+            'minHeightMessage' => [
+                8 => 'La hauteur de l\'image est trop petite, ({{ height }}px). Hauteur minimum attendu : {{ min_height }}px',
+            ],
+        ],
+    ],
+    $o[0],
+    []
+); }];
